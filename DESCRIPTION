@@ -1,7 +1,7 @@
 Package: mutsneedle
 Title: Mutation lolipop needle plot
 Version: 0.0.0.9000
-Authors@R: person("Zayed", "Albertyn", email = "xxx", role = c("aut", "cre"))
+Authors@R: person("Zayed", "Albertyn", email = "zayed@xxx.com", role = c("aut", "cre"))
 Description: Creates an interactive visualiation of mutation lolipop diagrams for investigation of mutations in samples.
 Depends: R (>= 3.4.2)
 License: What license is it under?
