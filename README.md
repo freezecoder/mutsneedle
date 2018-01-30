@@ -29,10 +29,14 @@ mutsneedle(mutdata=exampleData(),domains=exampleRegionData())
 
 The mutdata input is an R data frame with the colums:
 
-coord - A string coordinate e.g. "11" , "1-10" are both valid
-category - String describing the category of the mutation
-value - numeric value
+* coord - A string coordinate e.g. "11" , "1-10" are both valid
+* category - String describing the category of the mutation
+* value - numeric value
 
+Other columns may be present in the dataframe but they will be ignored.
+
+
+You may also insert a gene and transcript ID into the plot using the 'gene' and 'transcript' args to the mutsneedle function.
 
 Usage in a Shiny App
 =====================
