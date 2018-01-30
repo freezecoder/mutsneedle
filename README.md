@@ -5,17 +5,23 @@ Mutsneedle is an R version of the MutsNeedlePlot package developed by   Michael 
 
 
 
+Installation
+==============
+
+Firstly download and Install the package using devtools
+
+```
+library(devtools)
+install_github("freezecoder/mutsneedle")
+```
+
+
 Usage
 ==============
 
-Firstly download and Install the package
 
-```
-cd mutsneedle
-devtools::install()
-```
+The mutsneedle function expects a data frame of mutation information for a particular gene. It can also accept domain/region information to annotate the lolipop plot.
 
-Then use it
 
 ```
 mutsneedle(mutdata=exampleData(),domains=exampleRegionData())
