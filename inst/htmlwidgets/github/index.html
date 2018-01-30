@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<link href="build/muts-needle-plot.css" rel="stylesheet" type="text/css">
+
+<style>
+
+text {
+  font: 12px sans-serif;
+}
+
+</style>
+
+<body>
+<div id="yourDiv"> </div>
+
+<script src="build/muts-needle-plot.js"></script>
+<script src="src/js/dependencies/d3.js"></script>
+<script>
+
+    colorMap = {
+        // mutation categories
+        "missense_variant": "yellow",
+        "frameshift_variant": "blue",
+        "stop_gained": "red",
+        "stop_lost": "orange",
+        "synonymous_variant": "lightblue",
+        // regions
+        "X-binding": "olive",
+        "region1": "olive"
+    };
+
+    legends = {
+        x: "Corresponding protein positions to transcript X",
+        y: "Number of recorded mutation in transcript X of Gene Y and CT Z"
+    };
+
+    //Crate config Object
+    plotConfig = {
+        maxCoord :      350,
+        minCoord :      0,
+        height:         450,
+        targetElement : "yourDiv",
+        mutationData:   "snippets/data/muts.json",
+        //mutationData:   [{"category": "test", "coord": "99", "value": 77}],
+        regionData:     "snippets/data/regions.json",
+        //regionData:     {"beautiful-region": "99-199"},
+        colorMap:       colorMap,
+        legends:        legends
+    };
+
+    // Instantiate a plot
+    MutsNeedlePlot = require("muts-needle-plot");
+    p = new MutsNeedlePlot(plotConfig);
+
+
+</script>

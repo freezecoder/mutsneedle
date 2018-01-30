@@ -1,0 +1,14 @@
+# (uncomment to add a dependency)
+ dependencies:
+  - name: mutsneedle
+    version: 0.1
+    src:  htmlwidgets/lib/mutsneedle-0.1
+    script:
+      - d3.min.js
+      - d3-svg-legend.js
+      - underscore.js
+      - muts-needle-plot.js
+      - MutsNeedlePlot.js
+      - testdata.js
+    stylesheet:
+      - muts-needle-plot.css

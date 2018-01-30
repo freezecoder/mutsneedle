@@ -1,0 +1,57 @@
+# Mutsneedle: An R package to generating interactive  lolipop plots
+
+
+Mutsneedle is an R version of the MutsNeedlePlot package developed by   Michael Schroeder https://github.com/mpschr
+
+
+
+Usage
+==============
+
+Firstly download and Install the package
+
+```
+cd mutsneedle
+devtools::install()
+```
+
+Then use it
+
+```
+mutsneedle(mutdata=exampleData(),domains=exampleRegionData())
+```
+
+
+The mutdata input is an R data frame with the colums:
+
+coord - A string coordinate e.g. "11" , "1-10" are both valid
+category - String describing the category of the mutation
+value - numeric value
+
+
+
+
+More info Mutations Needle Plot (muts-needle-plot)
+=================================================
+
+A needle-plot (aka stem-plot or lollipop-plot) plots each data point as a big dot and adds a vertical line that makes it appear like a needle. 
+
+![DOI](https://zenodo.org/badge/7688/bbglab/muts-needle-plot.svg)
+
+This software is **citable**! Different citation styles available at *http://dx.doi.org/*+DOI
+
+Availability
+-----------------------
+
+   * **Live examples** at the BioJS-registry: <http://biojs.io/d/muts-needle-plot>
+   * **Installable JavaScript library** at npm-registry: <https://www.npmjs.org/package/muts-needle-plot>
+   * **Source code** at GitHub: <https://github.com/bbglab/muts-needle-plot>
+
+![Image of a Needle-Plot](mutations-needle-plot.png)
+
+Examples (snippets)
+----------------------
+
+This library is can be found as npm-library in the BioJS registry.
+
+ Thus examples can bee seen at the biojs.net registry: <http://biojs.net/>

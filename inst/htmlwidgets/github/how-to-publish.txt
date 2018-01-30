@@ -1,0 +1,40 @@
+Make sure you have npm installed.
+--------------------------------------
+
+
+1. Pull from repository:
+
+    git pull
+
+2. Check and increment the version in the `package.json` file. E.g. version "0.8.0"
+
+3. Check if examples are working fine
+
+    npm install (or gulp build)
+    npm run sniper
+
+    access http://localhost:9090/snippets/ and see the examples
+
+
+4. Publish the npm-module as 'bbglab' follow the instructions given by the publish command
+
+    npm publish
+
+
+5. Commit all changes, push to repository
+
+    git commit -a -m "Release of version 0.8.0"
+    git tag -a v0.8.0 -m 'version 0.8.0'
+    git push
+    git push origin --tags
+
+6. Go to GitHub and schedule a new Release
+    Title: Mutations Needle Plot v0.8.0
+
+    Release notes:
+    A needle-plot (aka stem-plot or lollipop-plot) plots each data point as a big dot and adds a vertical line that makes it appear like a needle.
+
+    Changelog:
+    v0.8.0
+     * Optimization for download: Standard styling in SVG, interaction in external .css
+
