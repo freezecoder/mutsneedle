@@ -2,8 +2,7 @@
 
 
 Mutsneedle is an R version of the MutsNeedlePlot package developed by   Michael Schroeder https://github.com/mpschr
-
-
+In many bioinformatics/genomics task involving mutation inspection it is quite useful to explore the significant of certain alterations to a protein sequence.
 
 Installation
 ==============
@@ -34,6 +33,27 @@ coord - A string coordinate e.g. "11" , "1-10" are both valid
 category - String describing the category of the mutation
 value - numeric value
 
+
+Usage in a Shiny App
+=====================
+
+The app is quite easy to call in Shiny thanks to the wonderful htmlwidgets package
+
+```
+library(shiny)
+library(mutsneedle)
+shinyApp(
+   ui = mutsneedleOutput("id",width=800,height=500),
+   server = function(input, output) {
+     output$id <- renderMutsneedle(
+        data <- exampleMutationData()
+        regiondata <- exampleRegionData()
+       mutsneedle(mutdata=data,domains=regiondata)
+     )
+   }
+ )
+
+```
 
 
 
