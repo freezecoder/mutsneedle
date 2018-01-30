@@ -26,6 +26,8 @@ The mutsneedle function expects a data frame of mutation information for a parti
 mutsneedle(mutdata=exampleData(),domains=exampleRegionData())
 ```
 
+![Rstudio mutsneedle](example_usage.png "Mutsneedle usage in Rstudio editor")
+
 
 The mutdata input is an R data frame with the colums:
 
