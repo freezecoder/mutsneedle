@@ -55,3 +55,19 @@ Examples (snippets)
 This library is can be found as npm-library in the BioJS registry.
 
  Thus examples can bee seen at the biojs.net registry: <http://biojs.net/>
+
+
+Issues
+----------
+
+Please report issues at: <https://github.com/freezecoder/mutsneedle/issues>
+Authors
+--------
+
+Original credit goes to Michael Schroeder and his group for the javascript version.
+
+The R/HTMLWidgets credit is done by
+
+**Zayed Albertyn**
+
++ <https://github.com/freezecoder>
