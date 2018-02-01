@@ -11,9 +11,11 @@ Firstly download and Install the package using devtools
 
 ```
 library(devtools)
+library(htmlwidgets)
 install_github("freezecoder/mutsneedle")
 ```
 
+It may not be necessary to include htmlwidgets with mutsneedle but this has not been tested.
 
 Usage
 ==============
@@ -25,6 +27,8 @@ The mutsneedle function expects a data frame of mutation information for a parti
 ```
 mutsneedle(mutdata=exampleData(),domains=exampleRegionData())
 ```
+
+![Rstudio mutsneedle](example_usage.png "Mutsneedle usage in Rstudio editor")
 
 
 The mutdata input is an R data frame with the colums:
@@ -46,6 +50,8 @@ The app is quite easy to call in Shiny thanks to the wonderful htmlwidgets packa
 ```
 library(shiny)
 library(mutsneedle)
+library(htmlwidgets)
+
 shinyApp(
    ui = mutsneedleOutput("id",width=800,height=500),
    server = function(input, output) {
