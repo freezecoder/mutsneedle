@@ -35,7 +35,7 @@
 #' @import htmlwidgets
 #'
 #' @export
-mutsneedle <- function(title=" Mutation Needle Plot",domains=NULL, mutdata=NULL,colorMap=NULL,gene="TP53",transcript="ENST032423423",maxlength=800,width = NULL, height = NULL, elementId = NULL) {
+mutsneedle <- function(title=" Mutation Needle Plot",domains=NULL, mutdata=NULL,colorMap=NULL,gene="TP53",transcript="ENST032423423",maxlength=800,width = NULL, height = NULL, elementId = NULL,xlab=NULL,ylab=NULL) {
 
   if (!is.data.frame(mutdata)) {
     stop("mutsneedle: 'mutdata' must be a data.frame with 'coord', 'category' and 'value' cols ",
@@ -49,7 +49,7 @@ mutsneedle <- function(title=" Mutation Needle Plot",domains=NULL, mutdata=NULL,
   if (!is.null(domains))
     domains = dataframeToD3(domains)
 
-  # forward options using opts
+  # forward options to javascript using named 'opts'
   opts = list(
     message =title,
     mutdata=mutdata,
@@ -57,7 +57,9 @@ mutsneedle <- function(title=" Mutation Needle Plot",domains=NULL, mutdata=NULL,
     colorMap=colorMap,
     gene=gene,
     domains=domains,
-    max=maxlength
+    max=maxlength,
+    xlab=xlab,
+    ylab=ylab
   )
 
   # create widget

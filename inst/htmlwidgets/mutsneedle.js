@@ -45,9 +45,18 @@ HTMLWidgets.widget({
           colorMap=opts.colorMap;
         }
 
+	var xlab=" ";
+	var ylab="Number of Mutations";
+	if (opts.xlab) {
+		xlab=opts.xlab;
+	}
+	if (opts.ylab){
+		ylab=opts.ylab;
+	}
+
         var legends = {
-                  x:  opts.gene + ": Transcript " +opts.transcript ,
-                  y: "Number of recorded mutations"
+                  x:  opts.gene + ":" +opts.transcript + " " + opts.xlab ,
+                  y:  opts.ylab
                 };
 
         plotConfig = {
